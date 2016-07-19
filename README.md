@@ -47,9 +47,15 @@
 
 ## Usage
 ```javascript
-import RNAppsFlyer from 'react-native-apps-flyer';
+import af from 'react-native-apps-flyer';
 
-// TODO: What do with the module?
-RNAppsFlyer;
+//To Initialize sdk using appId and devKey
+af.init(appId, devKey, function(err, events) {
+    //events is [appId, devKey] for now
+
+    //To trigger an event,
+    af.sendTrackingWithEvent(eventName, {key1: value1, key2: value2}, function(err, events) {
+        //events is {key1: value1, key2, value2}
+    });
+})
 ```
-  
