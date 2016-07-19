@@ -12,7 +12,7 @@
     "repository" :{
 	"type" : "git",
 	"url" : "https://github.com/ppsreejith/RNAppsFlyer"
-    }
+    },
   "_npmUser": {
     "email": "mailz4sreejith@gmail.com",
     "name": "ppsreejith"
