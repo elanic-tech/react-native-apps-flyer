@@ -5,10 +5,6 @@
 
 `$ npm install react-native-apps-flyer --save`
 
-### Mostly automatic installation
-
-`$ react-native link react-native-apps-flyer`
-
 ### Manual installation
 
 
