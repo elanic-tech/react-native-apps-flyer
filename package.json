@@ -1,0 +1,70 @@
+{
+  "_args": [
+    [
+      "react-native-apps-flyer",
+      "/Users/ppsreejith/Dropbox/MyStuff/Code/acwork/ios/testing"
+    ]
+  ],
+  "_from": "react-native-apps-flyer@latest",
+  "_id": "react-native-apps-flyer@1.0.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/react-native-apps-flyer",
+  "_nodeVersion": "6.1.0",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/react-native-apps-flyer-1.0.2.tgz_1468838805542_0.8489994362462312"
+  },
+  "_npmUser": {
+    "email": "mailz4sreejith@gmail.com",
+    "name": "ppsreejith"
+  },
+  "_npmVersion": "3.8.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "react-native-apps-flyer",
+    "raw": "react-native-apps-flyer",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_shasum": "3a6063b93cb6ee06386189ea1122ae31902aca32",
+  "_shrinkwrap": null,
+  "_spec": "react-native-apps-flyer",
+  "_where": "/Users/ppsreejith/Dropbox/MyStuff/Code/acwork/ios/testing",
+  "author": "",
+  "dependencies": {},
+  "description": "## Getting started",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "3a6063b93cb6ee06386189ea1122ae31902aca32",
+    "tarball": "https://registry.npmjs.com/react-native-apps-flyer/-/react-native-apps-flyer-1.0.2.tgz"
+  },
+  "gitHead": "63bea204fa30d4bb158ee53e4402d0f85778cb92",
+  "keywords": [
+    "react-native"
+  ],
+  "license": "",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "mailz4sreejith@gmail.com",
+      "name": "ppsreejith"
+    }
+  ],
+  "name": "react-native-apps-flyer",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react-native": "^0.29.0"
+  },
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.8"
+}
