@@ -9,6 +9,10 @@
     "host": "packages-16-east.internal.npmjs.com",
     "tmp": "tmp/react-native-apps-flyer-1.0.2.tgz_1468838805542_0.8489994362462312"
   },
+    "repository" :{
+	"type" : "git",
+	"url" : "https://github.com/ppsreejith/RNAppsFlyer"
+    }
   "_npmUser": {
     "email": "mailz4sreejith@gmail.com",
     "name": "ppsreejith"
@@ -60,5 +64,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.10"
+  "version": "1.0.11"
 }
