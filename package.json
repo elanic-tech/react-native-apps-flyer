@@ -11,13 +11,12 @@
   },
     "repository" :{
 	"type" : "git",
-	"url" : "https://github.com/ppsreejith/RNAppsFlyer"
+	"url" : "https://github.com/ppsreejith/react-native-apps-flyer"
     },
   "_npmUser": {
     "email": "mailz4sreejith@gmail.com",
     "name": "ppsreejith"
   },
-    "url": "https://github.com/ppsreejith/RNAppsFlyer",
   "_npmVersion": "3.8.6",
   "_phantomChildren": {},
   "_requested": {
@@ -37,7 +36,7 @@
   "_where": "/Users/ppsreejith/Dropbox/MyStuff/Code/acwork/ios/testing",
   "author": "",
   "dependencies": {},
-  "description": "## Getting started",
+  "description": "A react native wrapper for AppsFlyer",
   "devDependencies": {},
   "directories": {},
   "dist": {
@@ -64,5 +63,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.11"
+  "version": "1.1.0"
 }
