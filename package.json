@@ -47,7 +47,7 @@
   "keywords": [
     "react-native"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "index.js",
   "maintainers": [
     {
