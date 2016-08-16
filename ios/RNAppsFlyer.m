@@ -27,5 +27,10 @@ RCT_EXPORT_METHOD(sendTrackingWithEvent: (NSString *)eventName eventValues:(NSDi
   callback(@[[NSNull null], eventValues]);
 }
 
+RCT_EXPORT_METHOD(getAppsFlyerUID: (RCTResponseSenderBlock)callback)
+{
+    NSString *uid = [[AppsFlyerTracker sharedTracker] getAppsFlyerUID];
+    callback(@[[NSNull null], uid]);
+}
+
 @end
-  
