@@ -41,6 +41,11 @@ af.init(appId, devKey, function(err, events) {
     af.sendTrackingWithEvent(eventName, {key1: value1, key2: value2}, function(err, events) {
         //events is {key1: value1, key2, value2}
     });
+
+    //To get appsFlyerUID an event,
+    af.getAppsFlyerUID(function(err, uid) {
+
+    });
 })
 ```
 
