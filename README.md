@@ -3,7 +3,6 @@
 
 ## Installation
 
-This only works for iOS at the moment.
 `$ npm install react-native-apps-flyer --save`
 
 ### Manual installation
@@ -16,7 +15,21 @@ This only works for iOS at the moment.
 4. Install the appsFlyerFramework pod file from their website. Uncomment `use_frameworks!` in the Podfile.
 5. Run your project (`Cmd+R`)<
 
+#### Android
+
+1. In your MainApplication.java import `import com.ppsreejith.RNAppsFlyerPackage;`
+2. If you use an anonymous ReactNativeHost class create a field like this inside `private final Application application = MainApplication.this;`
+3. In the `getPackages()` method register the module `new RNAppsFlyerPackage(application)`
+4. Add the project to your **build.gradle** dependencies `compile project(':react-native-apps-flyer')`
+5. Add the project to your **settings.gradle**
+
+`include ':react-native-apps-flyer`
+
+`project(':react-native-apps-flyer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-apps-flyer/android')`
+
 ## Usage
+
+### ios
 ```javascript
 import af from 'react-native-apps-flyer';
 
@@ -34,4 +47,16 @@ af.init(appId, devKey, function(err, events) {
 
     });
 })
+```
+
+### android
+
+The android module currently does not support callbacks and event values
+
+```javascript
+import af from 'react-native-apps-flyer';
+
+//To Initialize sdk using appId and devKey
+af.init(appId, devKey);
+af.sendTrackingWithEvent(eventName);
 ```

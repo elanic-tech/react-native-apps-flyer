@@ -1,5 +1,7 @@
 
-package com.reactlibrary;
+package com.ppsreejith;
+
+import android.app.Application;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -10,10 +12,17 @@ import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
+
 public class RNAppsFlyerPackage implements ReactPackage {
+    private final Application application;
+
+    public RNAppsFlyerPackage(Application application) {
+        this.application = application;
+    }
+
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNAppsFlyerModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNAppsFlyerModule(reactContext, this.application));
     }
 
     @Override
