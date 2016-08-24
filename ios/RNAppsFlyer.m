@@ -33,4 +33,12 @@ RCT_EXPORT_METHOD(getAppsFlyerUID: (RCTResponseSenderBlock)callback)
     callback(@[[NSNull null], uid]);
 }
 
+RCT_EXPORT_METHOD(trackLocation: (double)longitude latitude:(double)latitude callback:(RCTResponseSenderBlock)callback)
+{
+    [[AppsFlyerTracker sharedTracker] trackLocation:longitude latitude:latitude];
+
+    NSArray *events = @[[NSNumber numberWithDouble:longitude], [NSNumber numberWithDouble:latitude]];
+    callback(@[[NSNull null], events]);
+}
+
 @end
