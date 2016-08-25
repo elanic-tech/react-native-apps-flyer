@@ -42,8 +42,13 @@ af.init(appId, devKey, function(err, events) {
         //events is {key1: value1, key2, value2}
     });
 
-    //To get appsFlyerUID an event,
+    // To get appsFlyerUID an event,
     af.getAppsFlyerUID(function(err, uid) {
+
+    });
+
+    // To track location with lat and long * note lat and long should be floats only,
+    af.trackLocation(last, long, function(err, data) {
 
     });
 })
