@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
  * Source: https://github.com/artemyarulin/react-native-eval/blob/master/android/src/main/java/com/evaluator/react/ConversionUtil.java
  */
 public class RNUtil {
-    private constructor() {
+    private RNUtil() {
     }
 
     /**
