@@ -9,6 +9,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.ReadableMap;
 
 import java.util.Map;
 
@@ -34,8 +35,8 @@ public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void sendTrackingWithEvent(final String eventName, final Map events, final Callback callback) {
-        AppsFlyerLib.getInstance().trackEvent(this.application, eventName, events);
+    public void sendTrackingWithEvent(final String eventName, final ReadableMap events, final Callback callback) {
+        AppsFlyerLib.getInstance().trackEvent(this.application, eventName, events.toHashMap());
         callback.invoke(null, events);
     }
 }
