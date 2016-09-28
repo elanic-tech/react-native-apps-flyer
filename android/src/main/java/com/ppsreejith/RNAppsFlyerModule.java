@@ -34,7 +34,8 @@ public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void sendTrackingWithEvent(final String eventName) {
-        AppsFlyerLib.getInstance().trackEvent(this.application, eventName, null);
+    public void sendTrackingWithEvent(final String eventName, final Map events, final Callback callback) {
+        AppsFlyerLib.getInstance().trackEvent(this.application, eventName, events);
+        callback.invoke(null, events);
     }
 }
