@@ -11,6 +11,7 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.Callback;
 import com.hs2.RNUtil;
+import java.util.Map;
 
 public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
 
