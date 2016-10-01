@@ -1,5 +1,6 @@
 
 # react-native-apps-flyer
+This React Natie Library uses the AppsFlyer 4.6.0 library for both iOS and Android
 
 ## Installation
 
@@ -17,14 +18,31 @@
 
 #### Android
 
-1. In your MainApplication.java import `import com.ppsreejith.RNAppsFlyerPackage;`
-2. If you use an anonymous ReactNativeHost class create a field like this inside `private final Application application = MainApplication.this;`
-3. In the `getPackages()` method register the module `new RNAppsFlyerPackage(application)`
-4. Add the project to your **build.gradle** dependencies `compile project(':react-native-apps-flyer')`
-5. Add the project to your **settings.gradle**
+##### MainApplication.java
+1. import `import com.ppsreejith.RNAppsFlyerPackage;`
+2. In your overridden `onCreate()`, add `AppsFlyerLib.getInstance().startTracking(this, "YOUR_DEV_KEY");`
+3. In the `getPackages()` method register the module `new RNAppsFlyerPackage(MainApplication.this)`
 
+##### AndroidManifest
+1. Add right inside the `<application>` tag
+```
+<meta-data android:name="com.google.android.gms.version"
+                   android:value="@integer/google_play_services_version"/>
+<receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
+    <intent-filter>
+        <action android:name="com.android.vending.INSTALL_REFERRER"/>
+    </intent-filter>
+</receiver>
+```
+
+
+
+##### build.gradle
+1. Add the project to your dependencies `compile project(':react-native-apps-flyer')`
+
+##### settings.gradle
+1. Add the project
 `include ':react-native-apps-flyer`
-
 `project(':react-native-apps-flyer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-apps-flyer/android')`
 
 ## Usage

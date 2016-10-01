@@ -14,7 +14,7 @@ import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
 
 public class RNAppsFlyerPackage implements ReactPackage {
-    private final Application application;
+    private Application application;
 
     public RNAppsFlyerPackage(Application application) {
         this.application = application;

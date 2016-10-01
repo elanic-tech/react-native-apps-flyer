@@ -135,4 +135,10 @@ public class RNUtil {
 
         return result;
     }
+
+    public static WriteableNativeMap toWriteableNativeMap(@Nullable ReadableMap readableMap) {
+        if (readableMap != null) {
+            return null;
+        }
+    }
 }

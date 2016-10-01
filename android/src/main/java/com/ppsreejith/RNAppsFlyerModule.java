@@ -3,20 +3,21 @@ package com.ppsreejith;
 
 import android.app.Application;
 
-import com.appsflyer.AppsFlyerLib;
+import com.appsflyer.*;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.Callback;
-import com.hs2.RNUtil;
+import java.util.HashMap;
+
 import java.util.Map;
+import android.util.Log;
 
 public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
 
-    private final ReactApplicationContext reactContext;
-    private final Application application;
+    private ReactApplicationContext reactContext;
+    private Application application;
 
     public RNAppsFlyerModule(ReactApplicationContext reactContext, Application application) {
         super(reactContext);
@@ -31,13 +32,15 @@ public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void init(final String appId, final String key) {
-        AppsFlyerLib.getInstance().startTracking(this.application, key);
+        AppsFlyerLib.getInstance().startTracking(application, key);
     }
 
     @ReactMethod
-    public void sendTrackingWithEvent(final String eventName, final ReadableMap eventData, final Callback callback) {
-        Map<String, Object> data = RNUtil.toMap(eventData);
-        AppsFlyerLib.getInstance().trackEvent(this.application, eventName, data);
-        callback.invoke(null, data);
+    public void sendTrackingWithEvent(final String eventName) {
+        AppsFlyerLib.getInstance().trackEvent(getReactApplicationContext(), eventName, new HashMap<String, Object>());
+        // Map<String, Object> eventValue = new HashMap<String, Object>();
+        // eventValue.put(AFInAppEventParameterName.LEVEL,9);
+        // eventValue.put(AFInAppEventParameterName.SCORE,100);
+        // AppsFlyerLib.getInstance().trackEvent(getReactApplicationContext(), AFInAppEventType.LEVEL_ACHIEVED, eventValue);
     }
 }
