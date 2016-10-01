@@ -14,7 +14,7 @@ This React Natie Library uses the AppsFlyer 4.6.0 library for both iOS and Andro
 2. Go to `node_modules` ➜ `react-native-apps-flyer` and add `RNAppsFlyer.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNAppsFlyer.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Install the appsFlyerFramework pod file from their website. Uncomment `use_frameworks!` in the Podfile.
-5. Run your project (`Cmd+R`)<
+5. Run your project (`Cmd+R`)
 
 #### Android
 
@@ -23,7 +23,9 @@ This React Natie Library uses the AppsFlyer 4.6.0 library for both iOS and Andro
 2. In your overridden `onCreate()`, add `AppsFlyerLib.getInstance().startTracking(this, "YOUR_DEV_KEY");`
 3. In the `getPackages()` method register the module `new RNAppsFlyerPackage(MainApplication.this)`
 
-##### AndroidManifest
+
+
+##### AndroidManifest.xml
 1. Add right inside the `<application>` tag
 ```
 <meta-data android:name="com.google.android.gms.version"
@@ -35,8 +37,6 @@ This React Natie Library uses the AppsFlyer 4.6.0 library for both iOS and Andro
 </receiver>
 ```
 
-
-
 ##### build.gradle
 1. Add the project to your dependencies `compile project(':react-native-apps-flyer')`
 
@@ -47,39 +47,31 @@ This React Natie Library uses the AppsFlyer 4.6.0 library for both iOS and Andro
 
 ## Usage
 
-### ios
 ```javascript
 import af from 'react-native-apps-flyer';
 
-//To Initialize sdk using appId and devKey
-af.init(appId, devKey, function(err, events) {
-    //events is [appId, devKey] for now
+af.init(appId, devKey, function(err) {
+    
+});
 
-    //To trigger an event,
-    af.sendTrackingWithEvent(eventName, {key1: value1, key2: value2}, function(err, events) {
-        //events is {key1: value1, key2, value2}
-    });
-
-    // To get appsFlyerUID an event,
-    af.getAppsFlyerUID(function(err, uid) {
-
-    });
-
-    // To track location with lat and long * note lat and long should be floats only,
-    af.trackLocation(last, long, function(err, data) {
-
-    });
-})
+//To trigger an event,
+af.sendTrackingWithEvent(eventName, {key1: value1, key2: value2}, function(err, events) {
+    // events is {key1: value1, key2, value2}
+});
 ```
 
-### android
-
-The android module currently does not support callbacks and event values
-
+### ios only
 ```javascript
 import af from 'react-native-apps-flyer';
 
-//To Initialize sdk using appId and devKey
-af.init(appId, devKey);
-af.sendTrackingWithEvent(eventName);
+// To get appsFlyerUID an event,
+af.getAppsFlyerUID(function(err, uid) {
+
+});
+
+// To track location with lat and long * note lat and long should be floats only,
+af.trackLocation(last, long, function(err, data) {
+
+});
+})
 ```

@@ -9,6 +9,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.ReadableMap;
 import java.util.HashMap;
 
 import java.util.Map;
@@ -36,11 +37,7 @@ public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void sendTrackingWithEvent(final String eventName) {
-        AppsFlyerLib.getInstance().trackEvent(getReactApplicationContext(), eventName, new HashMap<String, Object>());
-        // Map<String, Object> eventValue = new HashMap<String, Object>();
-        // eventValue.put(AFInAppEventParameterName.LEVEL,9);
-        // eventValue.put(AFInAppEventParameterName.SCORE,100);
-        // AppsFlyerLib.getInstance().trackEvent(getReactApplicationContext(), AFInAppEventType.LEVEL_ACHIEVED, eventValue);
+    public void sendTrackingWithEvent(final String eventName, ReadableMap eventData, Callback callback) {
+        AppsFlyerLib.getInstance().trackEvent(getReactApplicationContext(), eventName, null);
     }
 }
