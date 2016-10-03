@@ -1,4 +1,4 @@
-package com.hs2;
+package com.ppsreejith;
 
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.ReadableArray;
