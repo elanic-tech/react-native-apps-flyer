@@ -20,22 +20,7 @@ This React Natie Library uses the AppsFlyer 4.6.0 library for both iOS and Andro
 
 ##### MainApplication.java
 1. import `import com.ppsreejith.RNAppsFlyerPackage;`
-2. In your overridden `onCreate()`, add `AppsFlyerLib.getInstance().startTracking(this, "YOUR_DEV_KEY");`
-3. In the `getPackages()` method register the module `new RNAppsFlyerPackage(MainApplication.this)`
-
-
-
-##### AndroidManifest.xml
-1. Add right inside the `<application>` tag
-```
-<meta-data android:name="com.google.android.gms.version"
-                   android:value="@integer/google_play_services_version"/>
-<receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
-    <intent-filter>
-        <action android:name="com.android.vending.INSTALL_REFERRER"/>
-    </intent-filter>
-</receiver>
-```
+2. In the `getPackages()` method register the module `new RNAppsFlyerPackage(MainApplication.this)`
 
 ##### build.gradle
 1. Add the project to your dependencies `compile project(':react-native-apps-flyer')`
@@ -54,6 +39,11 @@ af.init(appId, devKey, function(err) {
     
 });
 
+// To get appsFlyerUID,
+af.getAppsFlyerUID(function(err, uid) {
+
+});
+
 //To trigger an event,
 af.sendTrackingWithEvent(eventName, {key1: value1, key2: value2}, function(err, events) {
     // events is {key1: value1, key2, value2}
@@ -64,10 +54,7 @@ af.sendTrackingWithEvent(eventName, {key1: value1, key2: value2}, function(err, 
 ```javascript
 import af from 'react-native-apps-flyer';
 
-// To get appsFlyerUID an event,
-af.getAppsFlyerUID(function(err, uid) {
 
-});
 
 // To track location with lat and long * note lat and long should be floats only,
 af.trackLocation(last, long, function(err, data) {

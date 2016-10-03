@@ -38,8 +38,13 @@ public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void trackEvent(final String eventName, ReadableMap eventData, Callback callback) {
-        HashMap<String, Object> data = RNUtil.toMap(eventData);
+        Map<String, Object> data = RNUtil.toMap(eventData);
         AppsFlyerLib.getInstance().trackEvent(getReactApplicationContext(), eventName, data);
-        // callback.invoke()
+        callback.invoke(null, null);
+    }
+
+    public void getAppsFlyerUID(Callback callback) {
+        String appId = AppsFlyerLib.getInstance().getAppsFlyerUID(getReactApplicationContext());
+        callback.invoke(null, appId);
     }
 }
