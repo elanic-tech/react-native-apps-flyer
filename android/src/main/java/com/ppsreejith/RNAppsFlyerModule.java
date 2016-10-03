@@ -32,8 +32,9 @@ public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void init(final String appId, final String key) {
+    public void init(final String appId, final String key, Callback callback) {
         AppsFlyerLib.getInstance().startTracking(application, key);
+        callback.invoke(null, null);
     }
 
     @ReactMethod
