@@ -45,7 +45,7 @@ af.getAppsFlyerUID(function(err, uid) {
 });
 
 //To trigger an event,
-af.sendTrackingWithEvent(eventName, {key1: value1, key2: value2}, function(err, events) {
+af.trackEvent(eventName, {key1: value1, key2: value2}, function(err, events) {
     // events is {key1: value1, key2, value2}
 });
 ```
