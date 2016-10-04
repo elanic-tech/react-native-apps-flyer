@@ -34,29 +34,29 @@ public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
     @Override
     public Map<String, Object> getConstants() {
         HashMap<String, Object> constants = new HashMap<String, Object>();
-        contants.put("ACHIEVEMENT_UNLOCKED", AFInAppEventType.ACHIEVEMENT_UNLOCKED);
-        contants.put("ADD_PAYMENT_INFO", AFInAppEventType.ADD_PAYMENT_INFO);
-        contants.put("ADD_TO_CART", AFInAppEventType.ADD_TO_CART);
-        contants.put("ADD_TO_WISH_LIST", AFInAppEventType.ADD_TO_WISH_LIST);
-        contants.put("COMPLETE_REGISTRATION", AFInAppEventType.COMPLETE_REGISTRATION);
-        contants.put("CONTENT_VIEW", AFInAppEventType.CONTENT_VIEW);
-        contants.put("INITIATED_CHECKOUT", AFInAppEventType.INITIATED_CHECKOUT);
-        contants.put("INVITE", AFInAppEventType.INVITE);
-        contants.put("LEVEL_ACHIEVED", AFInAppEventType.LEVEL_ACHIEVED);
-        contants.put("LOCATION_CHANGED", AFInAppEventType.LOCATION_CHANGED);
-        contants.put("LOCATION_COORDINATES", AFInAppEventType.LOCATION_COORDINATES);
-        contants.put("LOGIN", AFInAppEventType.LOGIN);
-        contants.put("OPENED_FROM_PUSH_NOTIFICATION", AFInAppEventType.OPENED_FROM_PUSH_NOTIFICATION);
-        contants.put("ORDER_ID", AFInAppEventType.ORDER_ID);
-        contants.put("PURCHASE", AFInAppEventType.PURCHASE);
-        contants.put("RATE", AFInAppEventType.RATE);
-        contants.put("RE_ENGAGE", AFInAppEventType.RE_ENGAGE);
-        contants.put("SEARCH", AFInAppEventType.SEARCH);
-        contants.put("SHARE", AFInAppEventType.SHARE);
-        contants.put("SPENT_CREDIT", AFInAppEventType.SPENT_CREDIT);
-        contants.put("TRAVEL_BOOKING", AFInAppEventType.TRAVEL_BOOKING);
-        contants.put("TUTORIAL_COMPLETION", AFInAppEventType.TUTORIAL_COMPLETION);
-        contants.put("UPDATE", AFInAppEventType.UPDATE);
+        constants.put("ACHIEVEMENT_UNLOCKED", AFInAppEventType.ACHIEVEMENT_UNLOCKED);
+        constants.put("ADD_PAYMENT_INFO", AFInAppEventType.ADD_PAYMENT_INFO);
+        constants.put("ADD_TO_CART", AFInAppEventType.ADD_TO_CART);
+        constants.put("ADD_TO_WISH_LIST", AFInAppEventType.ADD_TO_WISH_LIST);
+        constants.put("COMPLETE_REGISTRATION", AFInAppEventType.COMPLETE_REGISTRATION);
+        constants.put("CONTENT_VIEW", AFInAppEventType.CONTENT_VIEW);
+        constants.put("INITIATED_CHECKOUT", AFInAppEventType.INITIATED_CHECKOUT);
+        constants.put("INVITE", AFInAppEventType.INVITE);
+        constants.put("LEVEL_ACHIEVED", AFInAppEventType.LEVEL_ACHIEVED);
+        constants.put("LOCATION_CHANGED", AFInAppEventType.LOCATION_CHANGED);
+        constants.put("LOCATION_COORDINATES", AFInAppEventType.LOCATION_COORDINATES);
+        constants.put("LOGIN", AFInAppEventType.LOGIN);
+        constants.put("OPENED_FROM_PUSH_NOTIFICATION", AFInAppEventType.OPENED_FROM_PUSH_NOTIFICATION);
+        constants.put("ORDER_ID", AFInAppEventType.ORDER_ID);
+        constants.put("PURCHASE", AFInAppEventType.PURCHASE);
+        constants.put("RATE", AFInAppEventType.RATE);
+        constants.put("RE_ENGAGE", AFInAppEventType.RE_ENGAGE);
+        constants.put("SEARCH", AFInAppEventType.SEARCH);
+        constants.put("SHARE", AFInAppEventType.SHARE);
+        constants.put("SPENT_CREDIT", AFInAppEventType.SPENT_CREDIT);
+        constants.put("TRAVEL_BOOKING", AFInAppEventType.TRAVEL_BOOKING);
+        constants.put("TUTORIAL_COMPLETION", AFInAppEventType.TUTORIAL_COMPLETION);
+        constants.put("UPDATE", AFInAppEventType.UPDATE);
         return constants;
     }
 
