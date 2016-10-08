@@ -11,7 +11,6 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableMap;
 import java.util.HashMap;
-
 import java.util.Map;
 import android.util.Log;
 
@@ -63,16 +62,28 @@ public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void init(final String appId, final String key, Callback callback) {
         AppsFlyerLib.getInstance().startTracking(application, key);
-        callback.invoke(null);
+        callback.invoke();
     }
 
     @ReactMethod
     public void trackEvent(final String eventName, ReadableMap eventData, Callback callback) {
         Map<String, Object> data = RNUtil.toMap(eventData);
         AppsFlyerLib.getInstance().trackEvent(getReactApplicationContext(), eventName, data);
-        callback.invoke(null, null);
+        callback.invoke();
     }
 
+    @ReactMethod
+    public void getAppsFlyerUID(Callback callback) {
+        String appId = AppsFlyerLib.getInstance().getAppsFlyerUID(getReactApplicationContext());
+        callback.invoke(null, appId);
+    }
+
+    @ReactMethod
+    public void sendTrackingWithEvent(final String eventName) {
+        AppsFlyerLib.getInstance().trackEvent(getReactApplicationContext(), eventName, null);
+    }
+
+    @ReactMethod
     public void getAppsFlyerUID(Callback callback) {
         String appId = AppsFlyerLib.getInstance().getAppsFlyerUID(getReactApplicationContext());
         callback.invoke(null, appId);

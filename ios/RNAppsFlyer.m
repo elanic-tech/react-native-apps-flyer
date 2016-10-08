@@ -21,6 +21,12 @@ RCT_EXPORT_METHOD(init: (NSString *)appId devKey:(NSString *)devKey callback:(RC
   callback(@[[NSNull null], events]);
 }
 
+RCT_EXPORT_METHOD(sendTrackingWithEvent: (NSString *)eventName eventValues:(NSDictionary *)eventValues callback:(RCTResponseSenderBlock)callback)
+{
+  [[AppsFlyerTracker sharedTracker] trackEvent:eventName withValues:eventValues];
+  callback(@[[NSNull null], eventValues]);
+}
+
 RCT_EXPORT_METHOD(trackEvent: (NSString *)eventName eventValues:(NSDictionary *)eventValues callback:(RCTResponseSenderBlock)callback)
 {
   [[AppsFlyerTracker sharedTracker] trackEvent:eventName withValues:eventValues];

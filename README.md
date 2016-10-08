@@ -44,16 +44,15 @@ af.getAppsFlyerUID(function(err, uid) {
 
 });
 
-//To trigger an event,
+//To trigger an event
 af.trackEvent(eventName, {key1: value1, key2: value2}, function(err, events) {
     // events is {key1: value1, key2, value2}
 });
 ```
 
-### ios only
+### iOS only
 ```javascript
 import af from 'react-native-apps-flyer';
-
 
 
 // To track location with lat and long * note lat and long should be floats only,
@@ -61,4 +60,16 @@ af.trackLocation(last, long, function(err, data) {
 
 });
 })
+```
+
+# DEPRICATED
+```javascript
+
+// iOS
+af.sendTrackingWithEvent(eventName, {key1: value1, key2: value2}, function(err, events) {
+    // events is {key1: value1, key2, value2}
+});
+
+// Android
+af.sendTrackingWithEvent(eventName);
 ```
