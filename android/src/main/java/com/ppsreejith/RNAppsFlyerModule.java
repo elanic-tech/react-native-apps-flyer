@@ -73,12 +73,6 @@ public class RNAppsFlyerModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void getAppsFlyerUID(Callback callback) {
-        String appId = AppsFlyerLib.getInstance().getAppsFlyerUID(getReactApplicationContext());
-        callback.invoke(null, appId);
-    }
-
-    @ReactMethod
     public void sendTrackingWithEvent(final String eventName) {
         AppsFlyerLib.getInstance().trackEvent(getReactApplicationContext(), eventName, null);
     }
