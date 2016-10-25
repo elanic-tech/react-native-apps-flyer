@@ -22,13 +22,21 @@ This React Natie Library uses the AppsFlyer 4.6.0 library for both iOS and Andro
 1. import `import com.ppsreejith.RNAppsFlyerPackage;`
 2. In the `getPackages()` method register the module `new RNAppsFlyerPackage(MainApplication.this)`
 
-##### build.gradle
-1. Add the project to your dependencies `compile project(':react-native-apps-flyer')`
+##### android/app/build.gradle
+1. Add the project to your dependencies
+```gradle
+dependencies {
+    ...
+    compile project(':react-native-apps-flyer')
+}
+```
 
-##### settings.gradle
+##### android/settings.gradle
 1. Add the project
-`include ':react-native-apps-flyer`
-`project(':react-native-apps-flyer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-apps-flyer/android')`
+```gradle
+include ':react-native-apps-flyer'
+project(':react-native-apps-flyer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-apps-flyer/android')
+```
 
 ## Usage
 
