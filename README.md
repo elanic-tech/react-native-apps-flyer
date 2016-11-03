@@ -1,6 +1,6 @@
 
 # react-native-apps-flyer
-This React Natie Library uses the AppsFlyer 4.6.0 library for both iOS and Android
+This React Native Library uses the AppsFlyer 4.6.0 library for both iOS and Android
 
 ## Installation
 
