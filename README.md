@@ -70,7 +70,7 @@ af.trackLocation(last, long, function(err, data) {
 })
 ```
 
-# DEPRICATED
+# DEPRECATED
 ```javascript
 
 // iOS
